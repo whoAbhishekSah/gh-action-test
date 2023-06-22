@@ -1,0 +1,28 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 Running Tests"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 Building project"
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 Publishing image to ECR"
+  deploy-development:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 Deploying to Dev Env"
+  deploy-staging:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 Deploying to Staging Env"
+  deploy-production:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 Deploying to production Env"
